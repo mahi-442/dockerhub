@@ -15,7 +15,7 @@ pipeline {
         }
         stage('docker build') {
             steps {
-                sh "docker build -t mahi9618/docker_442:${DOCKER_TAG} ."
+                sh "docker build . -t mahi9618/docker_442:${DOCKER_TAG}"
             }
         }
     }
