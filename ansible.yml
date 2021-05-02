@@ -25,7 +25,7 @@
     - name: run docker container
       docker_container:
         name: docker_442
-        image: mahi9618/docker_442
+        image: "mahi9618/docker_442:{{DOCKER_TAG}}
         state: started
         published_ports:
           - 0.0.0.0:8080:80
