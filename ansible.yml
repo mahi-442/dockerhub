@@ -30,5 +30,4 @@
         state: started
         published_ports:
           - 8080:80
- ---
     
