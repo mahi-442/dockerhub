@@ -29,5 +29,5 @@
         image: "mahi9618/docker_442:{{DOCKER_TAG}}
         state: started
         published_ports:
-          - 8080:80
+          - 0.0.0.0:8080:8080
     
