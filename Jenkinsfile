@@ -26,6 +26,11 @@ pipeline {
                 sh "docker push mahi9618/docker_442:${DOCKER_TAG}"
             }
         }
+        stage('docker deploy') {
+            steps{
+                ansiblePlaybook credentialsId: 'devserver', disableHostKeyChecking: true, extras: '-e DOCKER_TAG=${DOCKER_TAG}', installation: 'ansible', inventory: 'inventory', playbook: 'ansible.yml'
+            }
+        }
     }
 }
 def getVersion() {
