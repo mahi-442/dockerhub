@@ -23,11 +23,12 @@
         name: docker-py
         state: present
     
-    - name: run docker container
+    - name: Start the container
       docker_container:
         name: docker_442
-        image: "mahi9618/docker_442:{{DOCKER_TAG}}
+        image: "mahi9618/docker_442:{{DOCKER_TAG}}"
         state: started
-        published_ports: - 0.0.0.0:8080:8080
+        published_ports:
+          - 0.0.0.0:8080:80
             
     
