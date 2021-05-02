@@ -1,8 +1,6 @@
 pipeline {
 
-    agent {
-        label 'linuxmachine'
-    }
+    
 
     stages {
         stage('git checkout') {
