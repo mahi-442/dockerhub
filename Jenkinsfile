@@ -18,6 +18,14 @@ pipeline {
                 sh "docker build . -t mahi9618/docker_442:${DOCKER_TAG}"
             }
         }
+        stage('docker push') {
+            steps{
+                withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerHubPwd')]) {
+                    sh "docker login -u mahi9618 -p ${dockerHubPwd}"
+                }
+                sh "docker push mahi9618/docker_442:${DOCKER_TAG}"
+            }
+        }
     }
 }
 def getVersion() {
