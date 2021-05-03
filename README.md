@@ -7,3 +7,4 @@ and its going to build docker image upload docker image to docker hub. Using ans
 docker container on to development server.
 
 ```
+☺️🙂☺️😀😋🙂☺️🙂
